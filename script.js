@@ -108,7 +108,7 @@ function updateDp() {
   let Dpu1 = Dpunit1.value;
   let Dp1 = parseFloat(Dplate1.value);
 
-  if (Mac1 === "PULVERISETTE 7 premium line") {
+if (Mac1 === "PULVERISETTE 7 premium line") {
     Rp = 0.07;
     Dp1 = Rp * 2000;
     Dpu1 = "mm";
@@ -120,6 +120,24 @@ function updateDp() {
   }
   else if (Mac1 === "PULVERISETTE 5/2 classic line") {
     Rp = 0.125;
+    Dp1 = Rp * 2000;
+    Dpu1 = "mm";
+  }
+  else if (Mac1 === "Retsch PM 100") {
+    Rp = 0.0705;
+    Dp1 = Rp * 2000;
+    Dpu1 = "mm";
+  }
+  else if (Mac1 === "Retsch PM 200") {
+    Rp = 0.0785;
+    Dp1 = Rp * 2000;
+    Dpu1 = "mm";
+  }else if (Mac1 === "Retsch PM 300") {
+    Rp = 0.09;
+    Dp1 = Rp * 2000;
+    Dpu1 = "mm";
+  }else if (Mac1 === "Retsch PM 400") {
+    Rp = 0.15;
     Dp1 = Rp * 2000;
     Dpu1 = "mm";
   }
@@ -321,6 +339,30 @@ buttonCal1.addEventListener("click", function() {
     MinDb = 0.0001;
     MaxDb = 0.04;
     MinRPM = 50;
+    MaxRPM = 400;
+
+  } else if (Mac1 === "Retsch PM 100") {
+    MinDb = 0.0001;
+    MaxDb = 0.03;
+    MinRPM = 100;
+    MaxRPM = 650;
+
+  } else if (Mac1 === "Retsch PM 200") {
+    MinDb = 0.0001;
+    MaxDb = 0.03;
+    MinRPM = 100;
+    MaxRPM = 650;
+
+  } else if (Mac1 === "Retsch PM 300") {
+    MinDb = 0.0001;
+    MaxDb = 0.03;
+    MinRPM = 100;
+    MaxRPM = 800;
+
+  } else if (Mac1 === "Retsch PM 400") {
+    MinDb = 0.0001;
+    MaxDb = 0.03;
+    MinRPM = 30;
     MaxRPM = 400;
 
   } else {
